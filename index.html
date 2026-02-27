@@ -1,110 +1,159 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calamares - Moda para Todos</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #000000, #1a1a1a);
-      color: white;
-      text-align: center;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calamares - Moda para Todos</title>
 
-    header {
-      padding: 60px 20px;
-      background: linear-gradient(45deg, #ff4d4d, #ff9900);
-    }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
-    header h1 {
-      font-size: 3em;
-      margin: 0;
-    }
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
 
-    .botao-whats {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 25px;
-      background: #25D366;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-    }
+body {
+  background: #0f0f0f;
+  color: white;
+}
 
-    .categorias {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-      padding: 40px;
-    }
+/* HERO */
+.hero {
+  height: 90vh;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+  url('https://images.unsplash.com/photo-1523381210434-271e8be1f52b');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 
-    .card {
-      background: rgba(255,255,255,0.1);
-      border-radius: 15px;
-      padding: 20px;
-    }
+.hero h1 {
+  font-size: 4em;
+  letter-spacing: 3px;
+}
 
-    footer {
-      padding: 20px;
-      background: black;
-    }
+.hero p {
+  margin-top: 15px;
+  font-size: 1.2em;
+}
 
-    .whatsapp-fixo {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25D366;
-      color: white;
-      font-size: 25px;
-      padding: 15px;
-      border-radius: 50%;
-      text-decoration: none;
-    }
-  </style>
+.botao {
+  margin-top: 25px;
+  padding: 15px 35px;
+  background: #25D366;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.botao:hover {
+  background: #1ebe5d;
+  transform: scale(1.05);
+}
+
+/* CATEGORIAS */
+.categorias {
+  padding: 60px 10%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  position: relative;
+  height: 400px;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.4s;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+.card h2 {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 1.8em;
+}
+
+/* ENDEREÇO */
+.endereco {
+  text-align: center;
+  padding: 50px 20px;
+  background: #111;
+}
+
+/* BOTÃO WHATS FIXO */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  padding: 18px;
+  border-radius: 50%;
+  text-decoration: none;
+  color: white;
+  font-size: 22px;
+}
+</style>
 </head>
+
 <body>
 
-<header>
+<section class="hero">
   <h1>CALAMARES</h1>
-  <p>Moda Masculina, Feminina e Infantil</p>
-  <a class="botao-whats" 
-     href="https://wa.me/556899865550" 
-     target="_blank">
-     Fale Conosco no WhatsApp
+  <p>Moda Masculina • Feminina • Infantil</p>
+  <a href="https://wa.me/556899865550" target="_blank" class="botao">
+    Fale Conosco no WhatsApp
   </a>
-</header>
+</section>
 
 <section class="categorias">
+
   <div class="card">
+    <img src="https://images.unsplash.com/photo-1490578474895-699cd4e2cf59">
     <h2>Moda Masculina</h2>
   </div>
 
   <div class="card">
+    <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f">
     <h2>Moda Feminina</h2>
   </div>
 
   <div class="card">
+    <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9">
     <h2>Moda Infantil</h2>
   </div>
+
 </section>
 
-<section>
+<section class="endereco">
   <h2>📍 Onde Estamos</h2>
   <p>Avenida Marechal Teodoro, Centro, Nº 1172</p>
 </section>
 
-<footer>
-  <p>© 2026 Calamares - Todos os direitos reservados</p>
-</footer>
-
-<a href="https://wa.me/556899865550" 
-   class="whatsapp-fixo" 
-   target="_blank">
-   💬
+<a href="https://wa.me/556899865550" target="_blank" class="whatsapp">
+  💬
 </a>
 
 </body>
-  </html>
+    </html>
