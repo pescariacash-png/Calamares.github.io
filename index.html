@@ -4,104 +4,88 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Calamares</title>
-
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
-
 <style>
-
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-
-body{
-  font-family: 'Montserrat', sans-serif;
-  background:#000;
-  color:white;
-}
-
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Montserrat',sans-serif;background:#000;color:white;scroll-behavior:smooth;}
+a{color:white;text-decoration:none;}
+/* MENU */
+.menu{position:fixed;top:0;width:100%;background:#111;display:flex;justify-content:center;gap:30px;padding:15px;z-index:999;}
+.menu a{font-weight:700;font-size:1.2em;transition:0.3s;}
+.menu a:hover{color:#ff4d4d;}
 /* HERO */
-.hero{
-  height:100vh;
-  background:
-  linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-  url('SUA-IMAGEM-AQUI.jpg');
-  background-size:cover;
-  background-position:center;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  padding:20px;
-}
-
-.hero h1{
-  font-size:5em;
-  font-weight:900;
-  letter-spacing:5px;
-  text-transform:uppercase;
-  text-shadow:
-    0 0 10px #ff0000,
-    0 0 20px #ff0000,
-    0 0 40px #ff4500;
-}
-
-.hero p{
-  margin-top:20px;
-  font-size:1.5em;
-  font-weight:700;
-  letter-spacing:2px;
-}
-
-/* BOTÃO GRANDE */
-.botao-whats{
-  margin-top:40px;
-  padding:20px 50px;
-  font-size:1.4em;
-  font-weight:900;
-  background:#25D366;
-  color:white;
-  text-decoration:none;
-  border-radius:50px;
-  box-shadow:0 0 20px #25D366;
-  transition:0.3s;
-}
-
-.botao-whats:hover{
-  transform:scale(1.1);
-  box-shadow:0 0 40px #25D366;
-}
-
-/* ENDEREÇO */
-.endereco{
-  background:#111;
-  padding:30px;
-  text-align:center;
-  font-weight:700;
-  letter-spacing:1px;
-}
-
+.hero{position:relative;height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),url('imagens/flyer.jpg');background-size:cover;background-position:center;}
+.hero h1{font-size:5em;font-weight:900;text-transform:uppercase;color:#ff4d4d;text-shadow:0 0 20px #ff0000,0 0 40px #ff4500;}
+.hero p{margin-top:20px;font-size:1.5em;font-weight:700;color:#fff;}
+.botao-whats{margin-top:40px;padding:20px 50px;font-size:1.5em;font-weight:900;background:#25D366;color:white;border-radius:50px;box-shadow:0 0 20px #25D366;transition:0.3s;display:inline-block;}
+.botao-whats:hover{transform:scale(1.1);box-shadow:0 0 40px #25D366;}
+/* SEÇÕES */
+section{padding:80px 10%;}
+h2{font-size:3em;margin-bottom:40px;color:#ff4d4d;text-shadow:0 0 10px #ff0000;}
+.galeria{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;}
+.galeria img{width:100%;border-radius:20px;transition:0.4s;cursor:pointer;}
+.galeria img:hover{transform:scale(1.1);filter:brightness(1.2);}
+.endereco{text-align:center;font-size:1.2em;letter-spacing:1px;font-weight:700;}
+.whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;padding:18px;border-radius:50%;text-decoration:none;color:white;font-size:25px;}
 </style>
 </head>
-
 <body>
 
-<section class="hero">
-  <h1>CALAMARES</h1>
-  <p>Calças Jeans • Masculina • Feminina • Infantil</p>
+<!-- MENU FIXO -->
+<nav class="menu">
+<a href="#hero">Home</a>
+<a href="#masculino">Masculino</a>
+<a href="#feminino">Feminino</a>
+<a href="#infantil">Infantil</a>
+<a href="#contato">Contato</a>
+</nav>
 
-  <a href="https://wa.me/556899865550" 
-     target="_blank" 
-     class="botao-whats">
-     FALE CONOSCO NO WHATSAPP
-  </a>
+<!-- HERO -->
+<section class="hero" id="hero">
+<h1>CALAMARES</h1>
+<p>Calças Jeans • Masculina • Feminina • Infantil</p>
+<a href="https://wa.me/556899865550" target="_blank" class="botao-whats">FALE CONOSCO NO WHATSAPP</a>
 </section>
 
-<section class="endereco">
-  📍 Avenida Marechal Teodoro, Centro Nº 1172
+<!-- MASCULINO -->
+<section id="masculino">
+<h2>Moda Masculina</h2>
+<div class="galeria">
+<img src="https://images.unsplash.com/photo-1490578474895-699cd4e2cf59" alt="Masculino1">
+<img src="https://images.unsplash.com/photo-1503342452485-86e35b87d9c7" alt="Masculino2">
+<img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f" alt="Masculino3">
+</div>
 </section>
+
+<!-- FEMININO -->
+<section id="feminino">
+<h2>Moda Feminina</h2>
+<div class="galeria">
+<img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f" alt="Feminino1">
+<img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e" alt="Feminino2">
+<img src="https://images.unsplash.com/photo-1517841905240-472988babdf9" alt="Feminino3">
+</div>
+</section>
+
+<!-- INFANTIL -->
+<section id="infantil">
+<h2>Moda Infantil</h2>
+<div class="galeria">
+<img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9" alt="Infantil1">
+<img src="https://images.unsplash.com/photo-1529655683826-aba9b3e77383" alt="Infantil2">
+<img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9" alt="Infantil3">
+</div>
+</section>
+
+<!-- CONTATO -->
+<section id="contato" class="endereco">
+<h2>Contato</h2>
+<p>📍 Avenida Marechal Teodoro, Centro, Nº 1172</p>
+<p>💬 <a href="https://wa.me/556899865550" target="_blank">WhatsApp</a></p>
+</section>
+
+<!-- BOTÃO WHATS FIXO -->
+<a href="https://wa.me/556899865550" class="whatsapp" target="_blank">💬</a>
 
 </body>
-</html>
+  </html>
